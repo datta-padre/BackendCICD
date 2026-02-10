@@ -21,6 +21,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
-            cd /root/nodejs
+            cd /home/ec2-user/BackendCICD
             git pull origin main
             docker compose up -d --build
