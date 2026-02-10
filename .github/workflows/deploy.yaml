@@ -16,11 +16,11 @@ jobs:
       - name: Deploy Via SSH
         uses: appleboy/ssh-action@v1.0.3 
         with:
-          host: ${{secrets.SSH_HOST}}
+          host: ${{ secrets.SSH_HOST }}
           username: ec2-user
           key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
             cd /home/ec2-user/BackendCICD
             git pull origin main
-            docker compose up -d --build
+            sudo docker compose up -d --build
