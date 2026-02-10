@@ -20,5 +20,5 @@ app.get("/", (req, res) => {
 app.use("/user", UserRoute);
 app.use('/admin', AdminRoute);
 
-const PORT =  80;
+const PORT =  8080;
 app.listen(PORT);
