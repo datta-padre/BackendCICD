@@ -16,12 +16,11 @@ jobs:
       - name: Deploy Via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ubuntu
-        key: ${{ secrets.SSH_KEY }}
-        port: 22
-        script: |
-         cd /home/ubuntu/BackendCICD
-         git pull origin main
-         sudo docker compose up -d --build
-
+          host: ${{ secrets.SSH_HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /home/ubuntu/BackendCICD
+            git pull origin main
+            sudo docker compose up -d --build
