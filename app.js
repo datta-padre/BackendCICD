@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use(express.json()); 
 
 app.get("/", (req, res) => {
-    res.send("Welcome TO React Node MongoDB Application Hiiii  computer science datta padre ");
+    res.send("Welcome TO React Node MongoDB Application  ");
 });
 
 app.use("/user", UserRoute);
